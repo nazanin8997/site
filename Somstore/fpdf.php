@@ -1172,7 +1172,7 @@ ini_set('magic_quotes_runtime', 0);
 		$font='';
 		$f=fopen($this->_getfontpath().$file,'rb',1);
 		if(!$f)
-			$this->Error('Font file not found');
+			$this->('Font file not found');
 		while(!feof($f))
 			$font.=fread($f,8192);
 		fclose($f);
@@ -1546,7 +1546,7 @@ function _parsepng($file)
 	else
 		$this->Error('Alpha channel not supported: '.$file);
 	if(ord(fread($f,1))!=0)
-		$this->Error('Unknown compression method: '.$file);
+		$this->('Unknown compression method: '.$file);
 	if(ord(fread($f,1))!=0)
 		$this->Error('Unknown filter method: '.$file);
 	if(ord(fread($f,1))!=0)

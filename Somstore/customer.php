@@ -7,7 +7,7 @@ include("config.php");
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html lang="en-US" xmlns="http://www.w3.org/1999/xhtml" dir="ltr">
 <head>
-	<title> Somstore Groups </title>
+	<title>گروه کاربران سایت </title>
     <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 	<link rel="shortcut icon" href="images/favicon.png" />
 	<link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
@@ -105,15 +105,15 @@ $(document).ready(function() {
 				<div id="top-nav">
 					<ul>
 					
-						<li><a href="contact.php" title="Contact"><span>Contact</span></a></li>
-						<li><a href="Sign In.php" title="Sign In"><span>Sign In</span></a></li>
+						
+						<li><a href="Sign In.php" title="Sign In"><span>ورود</span></a></li>
 					</ul>
 				</div>
 				<div class="cl">&nbsp;</div>
 	<div class="shopping-cart"  id="cart" id="right" >
 <dl id="acc">	
 <dt class="active">								
-<p class="shopping" >Shopping Cart &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+<p class="shopping" >سبدخرید &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
 </dt>
 <dd class="active" style="display: block;">
 <?php
@@ -130,17 +130,17 @@ if(isset($_SESSION["cart_session"]))
         echo '<span class="remove-itm"><a href="cart_update.php?removep='.$cart_itm["code"].'&return_url='.$current_url.'">&times;</a></span>'."</br>";
         echo '<h3  style="color: green" ><big> '.$cart_itm["name"].' </big></h3>';
         echo '<div class="p-code"><b><i>ID:</i></b><strong style="color: #d7565b" ><big> '.$cart_itm["code"].' </big></strong></div>';
-		echo '<span><b><i>Shopping Cart</i></b>( <strong style="color: #d7565b" ><big> '.$cart_itm["TiradaProductTiga"].'</big></strong>) </span>';
-        echo '<div class="p-price"><b><i>Price:</b></i> <strong style="color: #d7565b" ><big>'.$currency.$cart_itm["Qiimaha"].'</big></strong></div>';
+		echo '<span><b><i>سبدخرید</i></b>( <strong style="color: #d7565b" ><big> '.$cart_itm["TiradaProductTiga"].'</big></strong>) </span>';
+        echo '<div class="p-price"><b><i>قیمت:</b></i> <strong style="color: #d7565b" ><big>'.تومان.$cart_itm["Qiimaha"].'</big></strong></div>';
         echo '</li>';
-        $subtotal = ($cart_itm["Qiimaha"]*$cart_itm["TiradaProductTiga"]);
+        $subtotal = ($cart_itm["Qiimaha"]+$cart_itm["TiradaProductTiga"]);
         $total = ($total + $subtotal) ."</br>"; 
     }
     echo '</ul>';
-    echo '<span class="check-out-txt"><strong style="color:green" ><i>Total:</i> <big style="color:green" >'.$currency.$total.'</big></strong> <a   class="a-btnjanan"  href="view_cart.php"> <span class="a-btn-text">Check Out</span></a></span>';
-	echo '&nbsp;&nbsp;<a   class="a-btnjanan"  href="cart_update.php?emptycart=1&return_url='.$current_url.'"><span class="a-btn-text">Clear Cart</span></a>';
+    echo '<span class="check-out-txt"><strong style="color:green" ><i>قیمت نهایی:</i> <big style="color:green" >'.تومان.$total.'</big></strong> <a   class="a-btnjanan"  href="view_cart.php"> <span class="a-btn-text">نهایی کردن خرید</span></a></span>';
+	echo '&nbsp;&nbsp;<a   class="a-btnjanan"  href="cart_update.php?emptycart=1&return_url='.$current_url.'"><span class="a-btn-text">پاک کردن سبدخرید</span></a>';
 }else{
-    echo ' <h4>(Your Shopping Cart Is Empty!!!)</h4>';
+    echo ' <h4>(سبدخرید شما خالی است)</h4>';
 }
 ?>
 
@@ -157,57 +157,37 @@ if(isset($_SESSION["cart_session"]))
 			<!-- Begin Shell -->
 			<div class="shell">
 				<ul>
-					<li class="active"><a href="index.php" title="index.php">Home</a></li>
+					<li class="active"><a href="index.php" title="index.php">صفحه اصلی</a></li>
 					<li>
-						<a href="products.php">Category</a>
+						<a href="products.php">فهرست</a>
 						<div class="dd">
 							<ul>
 								<li>
-									 <a href="products.php"> FoodStuff</a>
-									<div class="dd">
-										<ul>
-											<li><a href="products.php">Fruits</a></li>
-                                            <li><a href="products.php">Biscuits</a></li>
-										</ul>
-									</div>
+									 <a href="products.php"> سرگرمی نوزاد</a>
+								
 								</li>
 								
 								<li>
-									 <a href="products.php"> Beverage</a>
-									<div class="dd">
-										<ul>
-											  <li><a href="products.php">Bavaria</a></li>
-                                             <li><a href="products.php">Reddbull</a></li>
-										</ul>
-									</div>
+									 <a href="products.php"> عروسک‌ها</a>
+									
 								</li>
 								
 								<li>
-									<a href="products.php"> Cleaning Material</a>
-									<div class="dd">
-										<ul>
-											<li><a href="products.php">Fairy</a></li>
-                                            <li><a href="products.php">Harpic</a></li>
-										</ul>
-									</div>
+									<a href="products.php">  حرکتی و مهارتی</a>
+									
 								</li>
 								
 								<li>
-									<a href="products.php"> Clothes</a>
-									<div class="dd">
-										<ul>
-											  <li><a href="products.php">Suit</a></li>
-                                              <li><a href="products.php">T.shirts</a></li>
-										</ul>
-									</div>
+									<a href="products.php"> بازی رایانه‌ای</a>
+									
 								</li>
 								
 							</ul>
 						</div>
 					</li>
-					   <li><a href="products.php"> Products</a></li>
+					   <li><a href="products.php"> </a></li>
 					   	   <li>
-						<a href="products.php">Warehouse</a>
+						<a href="products.php"></a>
 						<div class="dd">
 							<ul>
 								<li>
@@ -233,8 +213,8 @@ if(isset($_SESSION["cart_session"]))
 							</ul>
 						</div>
 					</li>
-					  <li><a href="about.php">About Us</a></li>
-					  <li><a href="customer.php">Free Sign Up</a> </li>
+					  <li><a href="about.php"></a></li>
+					  <li><a href="customer.php"></a> </li>
 				</ul>
 				<div class="cl">&nbsp;</div>
 			</div>
@@ -263,12 +243,12 @@ $(document).ready(function() {
 
         var emailaddressVal = $("#email").val();
         if(emailaddressVal == '') {
-            $("#email").after('<span class="error">Please enter your email address.</span>');
+            $("#email").after('<span class="error">لطفا آدرس ایمیل خود را وارد نمایید.</span>');
             hasError = true;
         }
 
         else if(!emailReg.test(emailaddressVal)) {
-            $("#email").after('<span class="error">Enter a valid email address.</span>');
+            $("#email").after('<span class="error">ایمیل نامعتبر.</span>');
             hasError = true;
         }
 
@@ -285,7 +265,7 @@ $(document).ready(function() {
 					<form class="register active"  id="myForm" method="POST" action="insertCustomer.php">
 
    
-       <th colspan="3"><h2>CUSTOMER REGISTRATION:</h2> </th> 
+       <th colspan="3"><h2>ثبت نام :</h2> </th> 
 						
 						
 						   
@@ -293,9 +273,9 @@ $(document).ready(function() {
    <tr>
     <td>  
 
-		<label> Email:</label>
+		<label> ایمیل:</label>
 		<input type="text" name="email" id="email"/>
-		<span class="error">This is an error</span>
+		<span class="error">خطا</span>
 
 	
 	</td>
@@ -303,9 +283,9 @@ $(document).ready(function() {
 
 
 
-		<label> FullName:</label>
+		<label> نام :</label>
 		<input type="text" name="name" />
-		<span class="error">This is an error</span>
+		<span class="error">خطا</span>
 							
    </td>
 
@@ -315,15 +295,15 @@ $(document).ready(function() {
     <tr>
     <td>  
 
-		<label>Password:</label>
+		<label>رمزعبور :</label>
 		<input type="password" name="password1" id="password1" />
 
 	</td>
 	
    <td>   
-     	  <label>UserName:</label>
+     	  <label>نام کاربری :</label>
 			<input type="text" name="username" id="username"/>
-			<span class="error">This is an error</span>
+			<span class="error">خطا</span>
 
 	</td>
 
@@ -332,16 +312,16 @@ $(document).ready(function() {
    <tr>
     <td>  
 
-		<label> Re-Password:</label>
+		<label> تکرار رمزعبور :</label>
 		<input type="password" name="password2"id="password2" />  
 		<div id="pass-info"> </div>
 	</td>
 	
    <td>   
      
-			<label> Phone:</label>
+			<label> شماره تماس:</label>
 			<input type="text" name="tell" id="tell"/>
-			<span class="error">This is an error</span>
+			<span class="error">خطا</span>
 
    </td>
    
@@ -349,52 +329,39 @@ $(document).ready(function() {
    </tr>
    
     <tr>
-    <td>   
+    <!-- <td>   
 	
 		<label> Cuntery:</label>
         <script type="text/javascript" src="js/countries.js"></script>
         <select onchange="print_state('state',this.selectedIndex);" id="country" name ="country"></select>
 
-   </td>
+   </td> -->
    
     <td>   
 
-        <label>Address:</label>
+        <label>آدرس :</label>
 		<input type="text" name="address" id="address"/>
-		<span class="error">This is an error</span>   
+		<span class="error">خطا</span>   
 		
 
    </td>
+   <td>   
    
-   
-   </tr>
-   
-   
-   <tr>
-      <td>   
-  
-            <label> City:</label>
-			<select name ="City" id ="state"></select>
-		    <script language="javascript">print_country("country");</script>
-			<span class="error">This is an error</span>
-    </td>
-   
-      <td>   
-   
-			<label>Postal code:</label>
-			<input type="text" name="pcode" id="pcode"/>
-			<span class="error">This is an error</span>
+   <label>کدپستی :</label>
+   <input type="text" name="pcode" id="pcode"/>
+   <span class="error">خطا</span>
 
-   </td>
+	</td>	
    
    </tr>
+   
    
    
   <tr>
 						<div class="bottom">
 
 						<td colspan="3">	
-						<button  id="btnSubmit" type="submit" name="submit"> Register</button>
+						<button  id="btnSubmit" type="submit" name="submit"> ثبت</button>
 							
 							<div class="clear"></div>
 						</div>
@@ -410,7 +377,7 @@ $(document).ready(function() {
 
 $(document).ready(function(){ 
     $("#btnSubmit").click(function() { 
-    alert("Are You Want To Save A New Customer !!!");
+    alert("اطلاعات اضافه شوند؟");
         $.ajax({
         cache: false,
         type: 'POST',
@@ -418,6 +385,7 @@ $(document).ready(function(){
         data: $("#myForm").serialize(),
         success: function(d) {
             $("#someElement").html(d);
+			console.log(d)
         }
         });
     }); 
@@ -432,35 +400,7 @@ $(document).ready(function(){
 			</div>
 			<!-- End Content -->
 			<!-- Begin Sidebar -->
-			<div id="sidebar">
-				<div class="col span_1_of_3">
-					<div class="contact_info">
-    	 				<h2>Find Us Here</h2>
-					    	  <div class="map">
-							   	    <iframe width="100%" height="175" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.co.in/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Lighthouse+Point,+FL,+United+States&amp;aq=4&amp;oq=light&amp;sll=26.275636,-80.087265&amp;sspn=0.04941,0.104628&amp;ie=UTF8&amp;hq=&amp;hnear=Lighthouse+Point,+Broward,+Florida,+United+States&amp;t=m&amp;z=14&amp;ll=26.275636,-80.087265&amp;output=embed"></iframe><br><small><a href="https://maps.google.co.in/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=Lighthouse+Point,+FL,+United+States&amp;aq=4&amp;oq=light&amp;sll=26.275636,-80.087265&amp;sspn=0.04941,0.104628&amp;ie=UTF8&amp;hq=&amp;hnear=Lighthouse+Point,+Broward,+Florida,+United+States&amp;t=m&amp;z=14&amp;ll=26.275636,-80.087265" style="color:#666;text-align:left;font-size:12px">View Larger Map</a></small>
-							  </div>
-      				</div>
-      			<div class="company_address">
-				     	<h2>Company Information :</h2>
-						    	<p><big> SomStore</big> Is A Online Sales System Company Established In SOMALILAND</p>
-						   		<p>  </p>
-								<p> ADMAS UNIVERSITY COLLEGE</p>
-						   		<p>SOMALILAND</p>
-								<p>HARGEISA</p>
-								 <BIG>PHONE</BIG>
-				   		          <p>+252-(63)-4138440</p>
-								   <p>+252-(63)-4188000</p>
-				   		          <BIG>EMAIL</BIG>
-				 	 	          <p>somstore@gmail.com</p>
-								  <p>mucad33@gmail.com</p>
-								  <p>jananalibritish@gmail.com</p>
-								   <BIG>FOLLOW US</BIG>
-				   		     <span>Facebook</span>, <span>Twitter</span></p>
-							         <p>somstore@gmail.com</p>
-				   </div>
-				 </div>
-			</div>
-			<!-- End Sidebar -->
+						<!-- End Sidebar -->
 			<div class="cl">&nbsp;</div>
 			<!-- Begin Products -->
 
@@ -469,83 +409,17 @@ $(document).ready(function(){
 		</div>
 		<!-- End Main -->
 		<!-- Begin Footer -->
-		<div id="footer">
-			<div class="boxes">
+		
 				<!-- Begin Shell -->
-				<div class="shell">
-					<div class="box post-box">
-						<h2>About SomStore</h2>
-						<div class="box-entry">
-							<img src="images/logo.png" alt="SomStore" width="160" height="80"/>
-							<p>You can be confident when you're shopping online with SomStore. Our Secure online shopping website encrypts your personal and financial information to ensure your order information is protected.We use industry standard 128-bit encryption. Our Secure online shopping website locks all critical information passed from you to us,
-                             such as personal information, in an encrypted envelope, making it extremely difficult for this information to be intercepted. </p>
-							<div class="cl">&nbsp;</div>
-						</div>
-					</div>
-					<div class="box social-box">
-						<h2>We are Social</h2>
-						<ul>
-							<li><a href="#" title="Facebook"><img src="images/social-icon1.png" alt="Facebook" /><span>Facebook</span><span class="cl">&nbsp;</span></a></li>
-							<li><a href="#" title="Twitter"><img src="images/social-icon2.png" alt="Twitter" /><span>Twitter</span><span class="cl">&nbsp;</span></a></li>							
-							<li><a href="#" title="RSS"><img src="images/social-icon4.png" alt="RSS" /><span>RSS</span><span class="cl">&nbsp;</span></a></li>
-							<li><a href="#" title="Blogger"><img src="images/social-icon7.png" alt="Blogger" /><span>Blogger</span><span class="cl">&nbsp;</span></a></li>
-						</ul>
-						<div class="cl">&nbsp;</div>
-					</div>
-					<div class="box">
-						<h2>Information</h2>
-						<ul>
-							<li><a href="#" title="Privacy Policy">Privacy Policy</a></li>
-							<li><a href="#" title="Contact Us">Contact Us</a></li>
-							<li><a href="#" title="Log In">Log In</a></li>
-							<li><a href="#" title="Account">Account</a></li>
-
-						</ul>
-					</div>
-					<div class="box last-box">
-						<h2>Categories</h2>
-						<ul>
-							<li><a href="#" title="Clothes">Clothes</a></li>
-							<li><a href="#" title="Cleaning Material">Cleaning Material</a></li>
-							<li><a href="#" title="Fizzi Drinks">Fizzy Drinks</a></li>
-							<li><a href="#" title="Food Stuff">Food Stuff</a></li>
-						</ul>
-					</div>
-					<div class="cl">&nbsp;</div>
-				</div>
+				
 				<!-- End Shell -->
 			</div>
 			<div class="copy">
 				<!-- Begin Shell -->
-				<div class="shell">
-					<div class="carts">
-						<ul>
-							<li><span>We accept</span></li>
-							<li><a href="#" title="Zaad service"><img src="images/zaad.png" alt="Zaad Service" /></a></li>
-							<li><a href="#" title="Somstore"><img src="images/suncart.png" alt="Somstore" /></a></li>
 				
-						</ul>
-					</div>	<p>&copy; Somstore.com. Groups <a href="index.php"><i><font color="fefefe"> Welcome To Somstore Online Shopping Site </font></i></a></p>
-					<div class="cl">&nbsp;</div>
-				</div>
-				<!-- End Shell -->
-			</div>
-		</div>
 		<!-- End Footer -->
 		
-		<div class="shout_box">
-      <div class="header"> live Discussion of Somstore <div class="close_btn">&nbsp;</div></div>
-     <div class="toggle_chat">
-     <div class="message_box">
-    </div>
-    <div class="user_info">
-    <input name="shout_username" id="shout_username" type="text" placeholder="Your Name" maxlength="15" />
-   <input name="shout_message" id="shout_message" type="text" placeholder="Type Message Hit Enter" maxlength="100" /> 
-    </div>
-    </div>
-	</div>
-	
-	</div>
+		
 	<!-- End Wrapper -->
 </body>
 </html>

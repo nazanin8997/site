@@ -162,7 +162,7 @@ $result = mysqli_query($mysqli,"SELECT * FROM employee where Employee_ID ='$upda
    
    <td>
 		<input type="hidden" id="ID" name="ID" value="<?php echo $row['Employee_ID'];?>"  placeholder="Full name" required>
-		<span class="error">This is an error</span>
+		<span class="error">خطا</span>
 	</td>
    
    
@@ -171,14 +171,14 @@ $result = mysqli_query($mysqli,"SELECT * FROM employee where Employee_ID ='$upda
 	  <label>Full Name:</label>
 		
 		<input type="text" id="name" name="name" value="<?php echo $row['Employee_Name'];?>"  placeholder="Full name" required>
-		<span class="error">This is an error</span>
+		<span class="error">خطا</span>
 	</td>
    <td>   
 
 	<label>Username:</label>
 
 		<input type="text" id="username" name="username" value="<?php echo $row['Username'];?>" placeholder="User name" required>
-		<span class="error">This is an error</span>
+		<span class="error">خطا</span>
 		
 
    </td>

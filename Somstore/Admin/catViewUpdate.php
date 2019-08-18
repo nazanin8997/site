@@ -165,14 +165,14 @@ $result = mysqli_query($mysqli,"SELECT * FROM category where Category_ID ='$upda
 
 	  <label>Category Name:</label>
 		<input type="text" id="categoryName" name="categoryName"  value="<?php echo $row['Category_Name'];?>"  required>
-		<span class="error">This is an error</span>
+		<span class="error">خطا</span>
 	</td>
    <td>   
 
 	<label>Description:</label>
 
 		<input type="text" id="desp" name="description" value="<?php echo $row['Discription'];?>" placeholder="Description" required>
-		<span class="error">This is an error</span>
+		<span class="error">خطا</span>
 		
 
    </td>
@@ -180,7 +180,7 @@ $result = mysqli_query($mysqli,"SELECT * FROM category where Category_ID ='$upda
 
 		<label> Picture:</label>
 		<input type="file" name="file" id="file" value="<?php echo $row['Picture'];?>" >
-		<span class="error">This is an error</span>
+		<span class="error">خطا</span>
                                
 	</td>
 

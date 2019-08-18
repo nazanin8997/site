@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 session_start();
 include("config.php");
 
@@ -265,7 +265,7 @@ if(isset($_SESSION["cart_session"]))
 				  	<h2>Contact Us</h2>
 					    <form method="POST" action="feedback_process.php" id="frmcontact">
 					    	<div>
-						    	<span><label>NAME</label></span>
+						    	<span><label>نام</label></span>
 						    	<span><input type="text" name="name" id="name"value=""></span>
 						    </div>
 						    <div>

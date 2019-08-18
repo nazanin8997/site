@@ -9,7 +9,7 @@ include("../config.php");
 
 <head>
 	<meta charset="utf-8"/>
-	<title>Somstore I Admin </title>
+	<title>صفحه افزودن محصولات </title>
 	
 	<link rel="stylesheet" href="css/layout.css" type="text/css" media="screen" />
 	<!--[if lt IE 9]>
@@ -62,19 +62,7 @@ include("../config.php");
 
 	  
 	  
-	   <div id="header">
- 
-         
-		<div id="logo-banner">
-		   
-				<div id="logo">
-					
-				<a href="index.php"><img src="images/logo.png" alt="" /></a>
-				</div>
-				
-				<div id="banner">
-                
-				</div>
+	  
 		
 		</div>
 		</div> <!--DHAMAADKA hedaerka-->
@@ -86,12 +74,12 @@ include("../config.php");
 
                 <nav><!-- Defining the navigation menu -->
                 <ul>
-                    <li class="selected"><a href="index.php">Home</a></li>
-                    <li><a href="add_warehouse.php">Add warehouse</a></li>
-                    <li><a href="add_product.php">Add product</a></li>
-                    <li><a href="Employee.php">Add employee</a></li>
-                    <li><a href="add_category.php">Categories</a></li>
-                    <li class="logout"> <span class="check"> <?php echo "Welcome Mr/Miss:   ". "<font color='##fa5400'><i><b>".$login_session."</b></i></font>" ;?> </span></li>
+                    <li class="selected"><a href="index.php">صفحه اصلی</a></li>
+                    <li><a href="add_warehouse.php"></a></li>
+                    <li><a href="add_product.php">افزودن محصول</a></li>
+                    <li><a href="Employee.php">افزودن ادمین</a></li>
+                    <li><a href="add_category.php"></a></li>
+                    <li class="logout"> <span class="check"> <?php echo " ". "<font color='##fa5400'><i><b></b></i></font>" ;?> </span></li>
 					
                 </ul>
 				
@@ -100,71 +88,31 @@ include("../config.php");
 	</section><!-- end of secondary bar -->
 	
 <aside id="sidebar" class="column">
-						<!-- Begin Search -->
-				<div id="search">
-					<form action="searchprod.php" method="post" accept-charset="utf-8">
-						<input type="text"  title="Search..." class="blink field"  placeholder="Search Product"   name='search' size=60 maxlength=100 />
-						<input class="search-button" type="submit" value="Submit" />
-						<div class="cl">&nbsp;</div>
-					</form>
-					
-				</div>
-				<!-- End Search -->
-		<hr/>
-		<h3> SomStore Database Backup:</h3>
-		<ul class="toggle">
-		    <li class="icn_folder"><a href="Backup.php">Backup Database</a></li>
-		</ul>
+						
 		
-		<h3>Reports:</h3>
-		<ul class="toggle">
-		    <li class="icn_settings"><a href="OrderReports.php">Order Report</a></li>
-			<li class="icn_settings"><a href="EmployeeReport.php">Employee Report</a></li>
-			<li class="icn_settings"><a href="CustomerReport.php">Customer Report</a></li>
-			<li class="icn_settings"><a href="ProductReport.php"> Product Report</a></li>
-     		
-		</ul>
-
-
-		
-		<h3>Administrator:</h3>
-		<ul class="toggle">
-		    <li class="icn_add_user"><a href="Employee.php">Add Employee</a></li>
-			<li class="icn_photo"><a href="add_product.php">Add Product</a></li>
-			<li class="icn_tags"><a href="add_warehouse.php">Add Warehouse</a></li>
-			<li class="icn_new_article"><a href="add_category.php">Add Category</a></li>
-		
-		</ul>
-		
-        <h3>Tables:</h3>
+        <h3>جداول :</h3>
 		<ul class="toggle">
 		    <li class="icn_categories"><a href="order.php">Order Detial</a></li>
      		<li class="icn_categories"><a href="customerTable.php">Customer Detail</a></li>
 		</ul>
 
-		<h3>Admin</h3>
+		<h3>ادمین :</h3>
 		<ul class="toggle">
 
-			<li class="icn_jump_back"><a href="../logout.php">Logout</a></li>
+			<li class="icn_jump_back"><a href="../logout.php">خروج</a></li>
 		</ul>
 	
 	</aside><!-- end of sidebar -->
 	
 	<section id="main" class="column">
-	<h4 class="alert_info">Welcome To <strong>"SomStore"</strong> Admin Panel As: <?php echo "  ". "<font color='#f90'><big><b>".$login_session."</b></big></font>" ;?>  </h4>
+	<h4 class="alert_info"><strong></strong> ادمین : <?php echo "  ". "<font color='#f90'><big><b>".$login_session."</b></big></font>" ;?>  </h4>
 
 <SCRIPT language="Javascript">
       <!--
       function isNumberKey(evt)
       {
 	 
-         var charCode = (evt.which) ? evt.which : event.keyCode
-		  window.alert("Pls. Sir In A Price Field Only Numbers Allowed !!!");
-         if (charCode > 31 && (charCode < 48 || charCode > 57))
-		
-            return false;
-            
-         return true;
+        // alert عددبودن قیمت
 		  
       }
      
@@ -175,16 +123,7 @@ include("../config.php");
     <script type="text/javascript">
         $(function() {
 		
-            $('.user').keyup(function() {
-			
-                if (this.value.match(/[^a-zA-Z]/g)) {
-				
-                    this.value = this.value.replace(/[^a-zA-Z ]/g, '');
-					 window.alert("Pls. Sir In A UserName Field Only Charecters Allowed !!!");
-                }
-				
-            });
-        });
+           });
     </script>
 	
    
@@ -194,26 +133,26 @@ include("../config.php");
 		 <table>
 					<form class="register active"  action=" insertProduct.php"method="POST" id="myForm">
 
-					<th colspan="3"><h2>ADD PRODUCT:</h2> </th> 
+					<th colspan="3"><h2>افزودن محصول :</h2> </th> 
 						
 
    <tr>
     <td>  
 
-		<label> Name:</label>
+		<label> نام :</label>
 		<input type="text" name="name" id="name"  class="user" required>
-		<span class="error">This is an error</span>
+		<span class="error">خطا</span>
 		
 	</td>
    <td>   
-	<label>Category:</label>
+	<label>فهرست :</label>
 
  <?php
 include('../config.php');
 $name= mysqli_query($mysqli,"select * from category");
 
 echo '<select  name="select"  id="ml" class="ed">';
-echo '<option selected="selected">Select</option>';
+echo '<option selected="selected">انتخاب</option>';
  while($res= mysqli_fetch_assoc($name))
 {
 
@@ -224,13 +163,13 @@ echo'</option>';
 echo'</select>';
 
 ?>
-		<span class="error">This is an error</span>
+		<span class="error">خطا</span>
 
    </td>
    
       <td>  
 
-		<label> Model:</label>
+		<label> مدل:</label>
 		<input type="text"  name="model"  id="model"  required> 
 		<span id="pass-info"> </span>
                                
@@ -244,20 +183,20 @@ echo'</select>';
 	
    <td> 
        
-	   <label> Type:</label>
+	   <label> نوع :</label>
 		<input type="text" name="type" id="type"  required>
 		<span id="pass-info"> </span>
    
 		
   </td>
     <td> 
-    	<label> Warehouse:</label>
+    	<label>  گروه :</label>
 <?php
 include('../config.php');
 $name= mysqli_query($mysqli,"select * from warehouse");
 
 echo '<select   name="WH"  id="ml" class="ed">';
-echo '<option selected="selected">Select</option>';
+echo '<option selected="selected">انتخاب</option>';
  while($res= mysqli_fetch_assoc($name))
 {
 
@@ -268,12 +207,12 @@ echo'</option>';
 echo'</select>';
 
 ?>
-		<span class="error">This is an error</span>
+		<span class="error">خطا</span>
                     
 	</td>
 	
    <td>   
-	    <label> Description:</label>
+	    <label> توضیحات :</label>
 		<input type="text"  name="ml"  id="ml"  maxlength="19" required> 
 		<span id="pass-info"> </span>
 		
@@ -285,17 +224,17 @@ echo'</select>';
    <tr>
     <td>  
 
-		<label>Price:</label>
+		<label>قیمت :</label>
 		<input type="text"  name="price"  id="price"  onkeypress="return isNumberKey(event)"  required>
-		<span class="error">This is an error</span>
+		<span class="error">خطا</span>
 		
 	
 	</td>
    <td>   
 
-		<label> Picture:</label>
+		<label> عکس:</label>
 		<input type="file" name="picture" id="picture"  required>
-		<span class="error">This is an error</span>
+		<span class="error">خطا</span>
 
    </td>
 
@@ -307,7 +246,7 @@ echo'</select>';
 
 			<td colspan="3">	
 		
-			<button name="save" id="delbutton" title="Click to Save"  class="a-btn" > <span class="a-btn-text"> Add Product</span></</button>
+			<button name="save" id="delbutton" title="Click to Save"  class="a-btn" > <span class="a-btn-text"> ثبت</span></</button>
 			<div class="clear"></div>
 			</div>
 
@@ -326,7 +265,7 @@ echo'</select>';
 		//Save the link in a variable called element
 		var element = $(this);
 
-		 if(confirm("Now(), You Preesed  Save Button \n Are You REady To Save It A PRODUCT? There is NO PLS.undo!"))
+		//  if(confirm("ثبت شود؟"))
 				  {
 
 		 $.ajax({
@@ -358,20 +297,20 @@ $result = mysqli_query($mysqli,"SELECT * FROM product");
       <div id="tab1" class="tab_content">
   <table class="tablesorter" cellspacing="0"> 
 
-			<thead>  <th Colspan="11">  Suncart Product Data Table </th></thead>
+			<thead>  <th Colspan="11">  جدول محصولات </th></thead>
 		<thead>
 			</tr>
-   		      <th>Check</th> 
+   		      <th>بررسی</th> 
     	      <th>ID</th>
-              <th> Name</th>			  
-    		<th>Category</th>
-		    <th>Model</th>				
-    		<th> Type</th>
-			 <th>WareHouse</th>				
-    		<th> Description</th>
-			<th>Price</th>				
-    		<th> Picture</th>
-    		<th>Actions</th>
+              <th> نام</th>			  
+    		<th>فهرست</th>
+		    <th>مدل</th>				
+    		<th> نوع</th>
+			 <th>گروه</th>				
+    		<th> توضیحات</th>
+			<th>قیمت</th>				
+    		<th> عکس</th>
+    		<th>عملیات</th>
 			</tr>
 		</thead>
 		<tbody>

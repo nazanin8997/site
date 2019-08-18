@@ -7,7 +7,7 @@
     <head>
         <meta charset="UTF-8" />
         <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">  -->
-        <title>Login and Registration Form with HTML5 and CSS3</title>
+        <title>Login or sign in</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
         <meta name="description" content="Login and Registration Form with HTML5 and CSS3" />
         <meta name="keywords" content="html5, css3, form, switch, animation, :target, pseudo-class" />
@@ -26,20 +26,13 @@
         <div class="container">
 
 
-			<header>
-
-					
-
-				 <h1><p> <a href="Sign In.php"><img src="images/logo.png" alt="" /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>Somstore SMART<strong>Login Form</strong> <span>Please Login Or Sign Up </span></p> </h1>
-				
-				
-			</header>
+			
 
 			<div class="codrops-top">
             <header>
 
-			    <p align="center" align="center"><b> <a href="#toregister"  class="a-btn"><span class="a-btn-text">Admin Login</span></a>  </b>	<b> <a href="#tologin"  class="a-btn"> <span class="a-btn-text">Customer Login</span> </a> </b>
-				<a href="Customer.php" class="a-btn"><strong><span class="a-btn-text">Create New Account</span></strong></a><a href="index.php" class="a-btn"><strong> <span class="a-btn-text">Back To Home</span></strong></a> </p>
+			    <p align="center" align="center"><b> <a href="#toregister"  class="a-btn"><span class="a-btn-text">ورود ادمین</span></a>  </b>	<b> <a href="#tologin"  class="a-btn"> <span class="a-btn-text">ورود به حساب کاربری</span> </a> </b>
+				<a href="Customer.php" class="a-btn"><strong><span class="a-btn-text">ثبت نام</span></strong></a><a href="index.php" class="a-btn"><strong> <span class="a-btn-text">برگشت به صفحه اصلی</span></strong></a> </p>
             </header>
 			 <div class="clr"></div>
 			 </div> <br><br>
@@ -51,21 +44,21 @@
                     <div id="wrapper">
                         <div id="login" class="animate form">
                             <form  action="userValidate.php" method="post" autocomplete="on"> 
-                                <h1>Customer Login:</h1> 
+                                <h1>ورود به حساب کاربری :</h1> 
                                 <p> 
-                                    <label for="username" class="uname" data-icon="u" > Your Email </label>
+                                    <label for="username" class="uname" data-icon="u" > ایمیل </label>
                                     <input type="text" name="magaca" required="required" type="text" placeholder="jananalibritish@gmail.com"/>
                                 </p>
                                 <p> 
-                                    <label for="password" class="youpasswd" data-icon="p"> Your Password </label>
+                                    <label for="password" class="youpasswd" data-icon="p"> رمزعبور </label>
                                     <input type="password" name='furaha' required="required" type="password" placeholder="eg. *********" /> 
                                 </p>
                                 <p class="keeplogin"> 
 									<input type="checkbox" name="loginkeeping" id="loginkeeping" value="loginkeeping" /> 
-									<label for="loginkeeping">Keep me logged in</label>
+									<label for="loginkeeping">به خاطر بسپار</label>
 								</p>
                                 <p class="login button"> 
-                                    <input type="submit"  name="submit"  value =" Login">
+                                    <input type="submit"  name="submit"  value =" ورود">
 								</p>
 
                             </form>
@@ -73,21 +66,21 @@
 
                         <div id="register" class="animate form">
                             <form  action="employeeValidate.php" method="post" autocomplete="on"> 
-                             <h1>Admin Login</h1> 
+                             <h1>ورود ادمین</h1> 
                                 <p> 
-                                    <label for="username" class="uname" data-icon="u" > Your User Name </label>
+                                    <label for="username" class="uname" data-icon="u" > نام کاربری </label>
                                     <input type="text" name="magaca" required="required" type="text" placeholder="myusername "/>
                                 </p>
                                 <p> 
-                                    <label for="password" class="youpasswd" data-icon="p"> Your Password </label>
+                                    <label for="password" class="youpasswd" data-icon="p"> کلمه عبور </label>
                                     <input type="password" name='furaha' required="required" type="password" placeholder="eg. *******" /> 
                                 </p>
                                 <p class="keeplogin"> 
 									<input type="checkbox" name="loginkeeping" id="loginkeeping" value="loginkeeping" /> 
-									<label for="loginkeeping">Keep me logged in</label>
+									<label for="loginkeeping">به خاطر بسپار</label>
 								</p>
                                 <p class="login button"> 
-                                    <input type="submit" value="Login" /> 
+                                    <input type="submit" value="ورود" /> 
 								</p>
 
 								</p>

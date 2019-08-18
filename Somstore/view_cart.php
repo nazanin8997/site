@@ -7,7 +7,7 @@ include("config.php");
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html lang="en-US" xmlns="http://www.w3.org/1999/xhtml" dir="ltr">
 <head>
-	<title> Somstore Group </title>
+	<title> فروشگاه اسباب بازی </title>
 	<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 
 		<link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
@@ -37,15 +37,15 @@ include("config.php");
 				<div id="top-nav">
 					<ul>
 					
-						<li><a href="contact.php" title="Contact"><span>Contact</span></a></li>
-						<li><a href="Sign In.php" title="Sign In"><span>Sign In</span></a></li>
+						
+						<li><a href="Sign In.php" title="Sign In"><span>ورود</span></a></li>
 					</ul>
 				</div>
 				<div class="cl">&nbsp;</div>
 <div class="shopping-cart"  id="cart" id="right" >
 <dl id="acc">	
 <dt class="active">								
-<p class="shopping" >Shopping Cart &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+<p class="shopping" >سبدخرید &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
 </dt>
 <dd class="active" style="display: block;">
 <?php
@@ -62,17 +62,17 @@ if(isset($_SESSION["cart_session"]))
         echo '<span class="remove-itm"><a href="cart_update.php?removep='.$cart_itm["code"].'&return_url='.$current_url.'">&times;</a></span>'."</br>";
         echo '<h3  style="color: green" ><big> '.$cart_itm["name"].' </big></h3>';
         echo '<div class="p-code"><b><i>ID:</i></b><strong style="color: #d7565b" ><big> '.$cart_itm["code"].' </big></strong></div>';
-		echo '<span><b><i>Shopping Cart</i></b>( <strong style="color: #d7565b" ><big> '.$cart_itm["TiradaProductTiga"].'</big></strong>) </span>';
-        echo '<div class="p-price"><b><i>Price:</b></i> <strong style="color: #d7565b" ><big>'.$currency.$cart_itm["Qiimaha"].'</big></strong></div>';
+		echo '<span><b><i>سبد خرید</i></b>( <strong style="color: #d7565b" ><big> '.$cart_itm["TiradaProductTiga"].'</big></strong>) </span>';
+        echo '<div class="p-price"><b><i>قیمت:</b></i> <strong style="color: #d7565b" ><big>'.تومان.$cart_itm["Qiimaha"].'</big></strong></div>';
         echo '</li>';
-        $subtotal = ($cart_itm["Qiimaha"]*$cart_itm["TiradaProductTiga"]);
+        $subtotal = ($cart_itm["Qiimaha"]+$cart_itm["TiradaProductTiga"]);
         $total = ($total + $subtotal) ."</br>"; 
     }
     echo '</ul>';
-    echo '<span class="check-out-txt"><strong style="color:green" ><i>Total:</i> <big style="color:green" >'.$currency.$total.'</big></strong> <a   class="a-btnjanan"  href="view_cart.php"> <span class="a-btn-text">Check Out</span></a></span>';
-	echo '&nbsp;&nbsp;<a   class="a-btnjanan"  href="cart_update.php?emptycart=1&return_url='.$current_url.'"><span class="a-btn-text">Clear Cart</span></a>';
+    echo '<span class="check-out-txt"><strong style="color:green" ><i>قیمت نهایی:</i> <big style="color:green" >'.تومان.$total.'</big></strong> <a   class="a-btnjanan"  href="view_cart.php"> <span class="a-btn-text">نهایی کردن خرید</span></a></span>';
+	echo '&nbsp;&nbsp;<a   class="a-btnjanan"  href="cart_update.php?emptycart=1&return_url='.$current_url.'"><span class="a-btn-text">پاک کردن سبد خرید</span></a>';
 }else{
-    echo ' <h4>(Your Shopping Cart Is Empty!!!)</h4>';
+    echo ' <h4>(سبد خرید شما خالی است)</h4>';
 }
 ?>
 
@@ -89,60 +89,40 @@ if(isset($_SESSION["cart_session"]))
 			<!-- Begin Shell -->
 			<div class="shell">
 				<ul>
-					<li class="active"><a href="index.php" title="index.php">Home</a></li>
+					<li class="active"><a href="index.php" title="index.php">صفحه اصلی</a></li>
 					<li>
-						<a href="products.php">Category</a>
+						<a href="products.php">فهرست</a>
 						<div class="dd">
 							<ul>
 								<li>
-									 <a href="warehouse_1.php"> FoodStuff</a>
-									<div class="dd">
-										<ul>
-											<li><a href="warehouse_1.php">Fruits</a></li>
-                                            <li><a href="warehouse_1.php">Biscuits</a></li>
-										</ul>
-									</div>
+									 <a href="warehouse_1.php"> سرگرمی نوزاد</a>
+									
 								</li>
 								
 								<li>
-									 <a href="warehouse_2.php"> Beverage</a>
-									<div class="dd">
-										<ul>
-											  <li><a href="warehouse_2.php">Bavaria</a></li>
-                                             <li><a href="warehouse_2.php">Reddbull</a></li>
-										</ul>
-									</div>
+									 <a href="warehouse_2.php"> عروسک‌ها</a>
+									
 								</li>
 								
 								<li>
-									<a href="warehouse_3.php"> Cleaning Material</a>
-									<div class="dd">
-										<ul>
-											<li><a href="warehouse_3.php">Fairy</a></li>
-                                            <li><a href="warehouse_3.php">Harpic</a></li>
-										</ul>
-									</div>
+									<a href="warehouse_3.php"> حرکتی و مهارتی</a>
+									
 								</li>
 								
 								<li>
-									<a href="warehouse_4.php"> Clothes</a>
-									<div class="dd">
-										<ul>
-											  <li><a href="warehouse_4.php">Suit</a></li>
-                                              <li><a href="warehouse_4.php">T.shirts</a></li>
-										</ul>
-									</div>
+									<a href="warehouse_4.php"> بازی رایانه‌ای</a>
+									
 								</li>
 								
 							</ul>
 						</div>
 					</li>
-					   <li><a href="products.php"> Products</a></li>
+					   <li><a href="products.php"> </a></li>
 					   	   <li>
-						<a href="products.php">Warehouse</a>
+						<a href="products.php"></a>
 						<div class="dd">
 							  	   <li>
-						<a href="products.php">Warehouse</a>
+						<a href="products.php"></a>
 						<div class="dd">
 							<ul>
 								<li>
@@ -170,8 +150,8 @@ if(isset($_SESSION["cart_session"]))
 					</li>
 						</div>
 					</li>
-					  <li><a href="about.php">About Us</a></li>
-					  <li><a href="customer.php">Free Sign Up</a> </li>
+					  <li><a href="about.php"> </a></li>
+					  <li><a href="customer.php">  </a> </li>
 				</ul>
 				<div class="cl">&nbsp;</div>
 			</div>
@@ -194,12 +174,10 @@ if(isset($_SESSION["cart_session"]))
 		echo '<table cellspacing="0">';
 			  echo   '<thead>';
 		  echo '<tr>';
-		  echo '<td>Check:</td>';
-		  echo '<td>Product:</td>';
-		  echo '<td>Quantity:</td>';
-		 echo ' <td>Description:</td>';
-		  echo '<td>Price:</td>';
-		  echo '<td>Action:</td>';
+		  echo '<td>بررسی:</td>';
+		  echo '<td>محصول:</td>';
+		  echo '<td>قیمت:</td>';
+		  echo '<td>عملیات:</td>';
 		  echo '</tr>';
 		  echo '</thead>';
 		  
@@ -220,12 +198,10 @@ if(isset($_SESSION["cart_session"]))
 		    echo '<tr class="cart-itm">';
             echo '<td><input type="checkbox"></td>';
 			echo '<td><h3>'.$obj->productName.' (Code :'.$Product_ID.')</h3></td> ';
-            echo '<td class="p-qty">Qty :<input type="text" name="product_qty" value="'.$cart_itm["TiradaProductTiga"].'" size="2"   maxlength="5" /></td>';
-            echo '<td>'.$obj->Description.'</td>';
-		    echo '<td class="p-price" style="color:green"><b>'.$currency.$obj->Price.'</b></td>';
+					    echo '<td class="p-price" style="color:green"><b>'.تومان.$obj->Price.'</b></td>';
 			echo '<td><span class="remove-check"><a href="cart_update.php?removep='.$cart_itm["code"].'&return_url='.$current_url.'">&times;</a></span></td>';
             echo '</tr>';
-			$subtotal = ($cart_itm["Qiimaha"]*$cart_itm["TiradaProductTiga"]);
+			$subtotal = ($cart_itm["Qiimaha"]+$cart_itm["TiradaProductTiga"]);
 			$total = ($total + $subtotal);
 
 			
@@ -238,11 +214,11 @@ if(isset($_SESSION["cart_session"]))
 			      		    }}}
 
     
-		echo '<span class="midigta"><a  class="a-btn" href="products.php?emptycart=1&return_url='.$current_url.'"><span class="a-btn-text">Continue Shopping</span></a></span>';
+		echo '<span class="midigta"><a  class="a-btn" href="products.php?emptycart=1&return_url='.$current_url.'"><span class="a-btn-text">برگشت به ادامه خرید</span></a></span>';
 		echo '<span class="check-out-txt">';
 
     	echo '</table>';
-		echo '<span> <h4 class="pricewayn"> Grand Total : <big style="color:green">'.$currency.$total.'</big> </h4></span> ';
+		echo '<span> <h4 class="pricewayn"> جمع نهایی : <big style="color:green">'.تومان.$total.'</big> </h4></span> ';
 		echo '<spa class="midigta"><a  class="a-btn" href="Somstore checkout/zaadprocess.php"><span class="a-btn-text">Proced On Zaad</span> </a></span>';
 		
 		echo '<span class="midigta"> <a  class="a-btn" href="Somstore checkout/process.php"> <span class="a-btn-text"> Pay On SomStore</span></a></span>';
@@ -250,7 +226,7 @@ if(isset($_SESSION["cart_session"]))
 		echo '</form>'; 
 
    }else{        
-		echo '<span class="wacwayn"><i>Your Cart is empty</i></span>';
+		echo '<span class="wacwayn"><i>سبدخرید شما خالی است</i></span>';
 	}
 	
     ?>
@@ -258,40 +234,11 @@ if(isset($_SESSION["cart_session"]))
 
 			
 				<!-- Begin Products Slider -->
-			<div id="product-slider">
-				<h2>Best Products</h2>
-				<ul>
-				
-		  	<?php
-			$result=mysqli_query($mysqli,"select * from product") or die (mysqli_error());
-			while($row=mysqli_fetch_array($result)){
-		?>
-					<li>
-						<a href="products.php" title="Product Link"><img src="images/<?php echo $row['Picture']?>" alt="IMAGES" /></a>
-						<div class="info">
-							<h4><b><?php echo $row['productName']?></b></h4>
-							<span class="number"><span>Price:<big style="color:green">$<?php echo $row['Price']?></big></span></span>
-					
-							<div class="cl">&nbsp;</div>
-							 
-						</div>
-					</li>
-					 <?php } ?>
-				</ul>
-				<div class="cl">&nbsp;</div>
-			</div>
+			
 			<!-- End Products Slider -->		
 			<br> <br> <br> <br> 
 			<!-- Begin Content -->
-			<div id="content">
-				<div class="post">
-					<h2>Welcome!</h2>
-					<img src="images/logo.png" alt="Post Image" height="160" width="260"/>
-					You can be confident when you're shopping online with SomStore. Our Secure online shopping website encrypts your personal and financial information to ensure your order information is protected.We use industry standard 128-bit encryption. Our Secure online shopping website locks all critical information passed from you to us,
-                   such as personal information, in an encrypted envelope, making it extremely difficult for this information to be intercepted.. <a href="#" class="more" title="Read More">Read More</a></p>
-					<div class="cl">&nbsp;</div>
-				</div>
-			</div>
+			
 			<!-- End Content -->
 
 			<div class="cl">&nbsp;</div>

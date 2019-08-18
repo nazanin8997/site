@@ -211,14 +211,14 @@ if (a==null || a=="")
 	  <label>Category Name:</label>
 		
 		<input type="text" id="empValid" name="categoryName" placeholder="Category Name" required>
-		<span class="error">This is an error</span>
+		<span class="error">خطا</span>
 	</td>
    <td>   
 
 	<label>Description:</label>
 
 		<input type="text" id="empValid" name="description" placeholder="Description" required>
-		<span class="error">This is an error</span>
+		<span class="error">خطا</span>
 		
 
    </td>

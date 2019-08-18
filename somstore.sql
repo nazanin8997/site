@@ -1,4 +1,4 @@
--- phpMyAdmin SQL Dump
+﻿-- phpMyAdmin SQL Dump
 -- version 4.6.4
 -- https://www.phpmyadmin.net/
 --
@@ -31,7 +31,7 @@ CREATE TABLE `category` (
   `Category_Name` varchar(123) NOT NULL,
   `Discription` varchar(255) NOT NULL,
   `Picture` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `category`
@@ -55,7 +55,7 @@ CREATE TABLE `chatting` (
   `message` varchar(100) NOT NULL,
   `date_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `ip_address` varchar(40) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `chatting`
@@ -88,7 +88,7 @@ CREATE TABLE `clients` (
   `email` varchar(80) DEFAULT NULL,
   `website` varchar(40) DEFAULT NULL,
   `comments` text
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -102,7 +102,7 @@ CREATE TABLE `contact` (
   `Email` varchar(29) NOT NULL,
   `Phone` varchar(29) NOT NULL,
   `Subject` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `contact`
@@ -130,7 +130,7 @@ CREATE TABLE `customer` (
   `City` varchar(25) NOT NULL DEFAULT '',
   `Adress` varchar(55) NOT NULL DEFAULT '',
   `PostalCode` varchar(25) NOT NULL DEFAULT ''
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `customer`
@@ -153,7 +153,7 @@ CREATE TABLE `employee` (
   `Username` varchar(25) NOT NULL,
   `Password` varchar(25) NOT NULL,
   `Picture` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `employee`
@@ -185,7 +185,7 @@ CREATE TABLE `invoices` (
   `tax` decimal(9,2) DEFAULT NULL,
   `total` decimal(9,2) DEFAULT '0.00',
   `comments` text
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -201,7 +201,7 @@ CREATE TABLE `invoice_items` (
   `qty` decimal(9,3) DEFAULT '1.000',
   `tax` decimal(4,2) DEFAULT '0.00',
   `price` decimal(9,2) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -217,7 +217,7 @@ CREATE TABLE `membership_grouppermissions` (
   `allowView` tinyint(4) NOT NULL DEFAULT '0',
   `allowEdit` tinyint(4) NOT NULL DEFAULT '0',
   `allowDelete` tinyint(4) NOT NULL DEFAULT '0'
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `membership_grouppermissions`
@@ -246,7 +246,7 @@ CREATE TABLE `membership_groups` (
   `description` text,
   `allowSignup` tinyint(4) DEFAULT NULL,
   `needsApproval` tinyint(4) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `membership_groups`
@@ -271,7 +271,7 @@ CREATE TABLE `membership_userrecords` (
   `dateAdded` bigint(20) UNSIGNED DEFAULT NULL,
   `dateUpdated` bigint(20) UNSIGNED DEFAULT NULL,
   `groupID` int(11) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -292,7 +292,7 @@ CREATE TABLE `membership_users` (
   `custom3` text,
   `custom4` text,
   `comments` text
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `membership_users`
@@ -320,7 +320,7 @@ CREATE TABLE `payment` (
   `Warehouse_ID` int(255) NOT NULL,
   `Dilivery_Address` varchar(75) NOT NULL,
   `Total_Amount` varchar(55) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `payment`
@@ -347,7 +347,7 @@ CREATE TABLE `product` (
   `Description` varchar(500) NOT NULL,
   `Price` varchar(255) NOT NULL,
   `Picture` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `product`
@@ -375,7 +375,7 @@ CREATE TABLE `tblsongs` (
   `songsinger` varchar(100) DEFAULT NULL,
   `songfile` varchar(50) DEFAULT NULL,
   `songwriter` varchar(100) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `tblsongs`
@@ -403,7 +403,7 @@ CREATE TABLE `warehouse` (
   `PostalCode` varchar(55) NOT NULL,
   `Email` varchar(35) NOT NULL,
   `Warehouse` varchar(55) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `warehouse`

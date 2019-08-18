@@ -227,7 +227,7 @@ if (e==null || e=="")
 	
 		<label> Warehouse Name:</label>
 		<input type="text" name="wname" id="wareValid"/>
-		<span class="error">This is an error</span>
+		<span class="error">خطا</span>
 
 	
 	
@@ -508,7 +508,7 @@ if (e==null || e=="")
 
 		<label>Email:</label>
 		<input type="text" name="email" id="email"/>
-		<span class="error">This is an error</span>
+		<span class="error">خطا</span>
 		
 	</td>
    </tr>
@@ -519,7 +519,7 @@ if (e==null || e=="")
 
 		<label> Address:</label>
 		<input type="text" name="address"  id="address"/>
-		<span class="error">This is an error</span>
+		<span class="error">خطا</span>
                                
 	</td>
 	
@@ -528,7 +528,7 @@ if (e==null || e=="")
        		<label> City:</label>
 		<input type="text" name="city"  id="wareValid"/>
 		
-		<span class="error">This is an error</span>
+		<span class="error">خطا</span>
    
 		
   </td>

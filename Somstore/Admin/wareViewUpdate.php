@@ -167,7 +167,7 @@ $result = mysqli_query($mysqli,"SELECT * FROM warehouse where Warehouse_ID ='$up
 	
 		<label> Warehouse Name:</label>
 		<input type="text" name="wname" id="wname"  value="<?php echo $row['Warehouse'];?>"  placeholder="Warehouse Name" required>
-		<span class="error">This is an error</span>
+		<span class="error">خطا</span>
 
 	
 	
@@ -448,7 +448,7 @@ $result = mysqli_query($mysqli,"SELECT * FROM warehouse where Warehouse_ID ='$up
 
 		<label>Email:</label>
 		<input type="text" name="email" id="email" value="<?php echo $row['Email'];?>"  placeholder="Email" required>
-		<span class="error">This is an error</span>
+		<span class="error">خطا</span>
 		
 	</td>
    </tr>
@@ -459,7 +459,7 @@ $result = mysqli_query($mysqli,"SELECT * FROM warehouse where Warehouse_ID ='$up
 
 		<label> Address:</label>
 		<input type="text" name="address"  id="address" value="<?php echo $row['Address'];?>"  placeholder="Address" required>
-		<span class="error">This is an error</span>
+		<span class="error">خطا</span>
                                
 	</td>
 	
@@ -468,7 +468,7 @@ $result = mysqli_query($mysqli,"SELECT * FROM warehouse where Warehouse_ID ='$up
        		<label> City:</label>
 		<input type="text" name="city"  id="city" value="<?php echo $row['City'];?>"  placeholder="City" required>
 		
-		<span class="error">This is an error</span>
+		<span class="error">خطا</span>
    
 		
   </td>

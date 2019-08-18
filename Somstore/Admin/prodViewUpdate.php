@@ -158,7 +158,7 @@ $result = mysqli_query($mysqli,"SELECT * FROM product  where Product_ID ='$updat
 					<th colspan="3"><h2>Update Product Data :</h2> </th> 
 						
 		<input type="hidden" id="ID" name="ID" value="<?php echo $row['Product_ID'];?>"  placeholder="ID" required>
-		<span class="error">This is an error</span>
+		<span class="error">خطا</span>
 	
    <tr>
 
@@ -167,14 +167,14 @@ $result = mysqli_query($mysqli,"SELECT * FROM product  where Product_ID ='$updat
 	  <label>Full Name:</label>
 		
 		<input type="text" id="fname" name="fname" value="<?php echo $row['productName'];?>"  placeholder="Full name" required>
-		<span class="error">This is an error</span>
+		<span class="error">خطا</span>
 	</td>
     <td>   
 
 	<label>Category Name:</label>
 
 		<input type="text" id="cname" name="cname" value="<?php echo $row['Category_ID'];?>" placeholder="User name" required>
-		<span class="error">This is an error</span>
+		<span class="error">خطا</span>
 	</td>
 	
     <td>   
@@ -182,7 +182,7 @@ $result = mysqli_query($mysqli,"SELECT * FROM product  where Product_ID ='$updat
 	<label>Model:</label>
 
 		<input type="text" id="model" name="model" value="<?php echo $row['Model'];?>" placeholder="User name" required>
-		<span class="error">This is an error</span>
+		<span class="error">خطا</span>
    </td>
 
    </tr>
@@ -193,14 +193,14 @@ $result = mysqli_query($mysqli,"SELECT * FROM product  where Product_ID ='$updat
 	  <label>Type:</label>
 		
 		<input type="text" id="type" name="type" value="<?php echo $row['Type'];?>"  placeholder="Full name" required>
-		<span class="error">This is an error</span>
+		<span class="error">خطا</span>
 	</td>
    <td>   
 
 	<label>Warehouse:</label>
 
 		<input type="text" id="whouse" name="whouse" value="<?php echo $row['Warehouse_ID'];?>" placeholder="User name" required>
-		<span class="error">This is an error</span>
+		<span class="error">خطا</span>
 		
 
    </td>
@@ -209,7 +209,7 @@ $result = mysqli_query($mysqli,"SELECT * FROM product  where Product_ID ='$updat
 	<label>Description:</label>
 
 	<input type="text" id="desp" name="desp" value="<?php echo $row['Description'];?>" placeholder="User name" required>
-	<span class="error">This is an error</span>
+	<span class="">خطا</span>
 		
 
    </td>
@@ -223,13 +223,13 @@ $result = mysqli_query($mysqli,"SELECT * FROM product  where Product_ID ='$updat
 	  <label>Price:</label>
 		
 		<input type="text" id="price" name="price" value="<?php echo $row['Price'];?>"  placeholder="Full name" required>
-		<span class="error">This is an error</span>
+		<span class="error">خطا</span>
 	</td>
    <td>   
 
 		<label> Picture:</label>
 		<input type="file" name="picture" id="picture"  value="<?php echo $row['Picture'];?>" placeholder="Full name" required>
-		<span class="error">This is an error</span>
+		<span class="error">خطا</span>
 
    </td>
 
